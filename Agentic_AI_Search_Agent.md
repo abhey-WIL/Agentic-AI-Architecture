@@ -117,6 +117,7 @@ Conceptually, the Search Agent comprises:
 - Reasoning Core (LLM)
 - Strategy Selection Logic
 - Payload Planning Logic
+- Beckn Network Tool Usage
 - Structured Output Formatter
 
 ### 6.1 Instruction Set
@@ -135,6 +136,11 @@ Used for:
 - Evaluating confidence in available data
 
 ### 6.3 Strategy Selection
+
+Determines which search path to take:
+
+- Experience-based CDS search
+- Natural language CDS catalog search
 
 Primary decision:
 - Do we have sufficient prior knowledge to run a targeted search?
