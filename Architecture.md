@@ -1,4 +1,4 @@
-# Agentic AI Architecture -- Orchestrator-Centric Design
+# Agentic AI Architecture - Orchestrator-Centric Design
 
 ------------------------------------------------------------------------
 
@@ -67,7 +67,7 @@ The **Base Orchestrator** is the brain of the system.
 
 ------------------------------------------------------------------------
 
-## 4. Base Orchestrator -- Deep Dive
+## 4. Base Orchestrator - Workflow
 
 The Base Orchestrator is **not an agent**.\
 It **may use lightweight LLM calls**, but it does **not perform domain
@@ -231,9 +231,15 @@ directly.
 
 ``` json
 {
-  "decision": "...",
-  "plan": "...",
-  "needsExecution": true
+  "intent": "EXECUTE_SEARCH",
+  "confidence": 0.92,
+  "executionRequest": {
+    "workflow": "NetworkSearch",
+    "parameters": {
+      "query": "bicycles",
+      "filters": {}
+    }
+  }
 }
 ```
 
